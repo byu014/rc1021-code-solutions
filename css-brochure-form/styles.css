@@ -10,8 +10,12 @@ fieldset {
   border: 0;
 }
 
+form {
+  width: 31%;
+}
+
 h2 {
-  color: lightcoral;
+  color: rgb(240, 95, 95);
   text-align: center;
 }
 
@@ -40,19 +44,22 @@ select {
 }
 
 button {
-  background-color: lightcoral;
+  background-color: rgb(240, 95, 95);
   color: white;
   border: none;
   border-radius: 2em;
-  width: 100px;
-  height: 40px;
+  width: 120px;
+  height: 45px;
+  font-size: 20px;
   position: relative;
-  right: -80%;
+  right: calc(120px - 100%);
   font-family: inherit;
 }
 
 input::placeholder {
   color: rgba(179, 179, 179, 0.9);
   padding: 0 10px;
+  position: relative;
+  top: 10%;
   font-size: 20px;
 }

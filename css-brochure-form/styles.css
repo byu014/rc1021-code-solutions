@@ -1,0 +1,65 @@
+div.container {
+  font-family: 'AtlasGrotesk', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+}
+
+fieldset {
+  border: 0;
+}
+
+form {
+  width: 31%;
+}
+
+h2 {
+  color: rgb(240, 95, 95);
+  text-align: center;
+}
+
+div.section {
+  margin: 20px 0;
+  font-family: 'Brandon Grotesque', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+}
+
+label {
+  margin-left: 15px;
+  margin-bottom: 100px;
+}
+
+input,
+select {
+  border-radius: 0.5em;
+  border: 1px solid rgba(109, 109, 109, 0.5);
+  width: 100%;
+  height: 50px;
+}
+
+select {
+  background-color: rgba(211, 211, 211, 0.5);
+}
+
+button {
+  background-color: rgb(240, 95, 95);
+  color: white;
+  border: none;
+  border-radius: 2em;
+  width: 120px;
+  height: 45px;
+  font-size: 20px;
+  position: relative;
+  right: calc(120px - 100%);
+  font-family: inherit;
+}
+
+input::placeholder {
+  color: rgba(179, 179, 179, 0.9);
+  padding: 0 10px;
+  position: relative;
+  top: 10%;
+  font-size: 20px;
+}

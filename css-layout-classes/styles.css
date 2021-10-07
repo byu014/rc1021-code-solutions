@@ -1,0 +1,42 @@
+body {
+  font-family: sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 29%;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.col-one-third {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% / 3);
+  justify-content: center;
+}
+
+.col-full {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: left;
+}
+
+.col-two-thirds {
+  display: flex;
+  width: calc(100% * (2 / 3));
+  justify-content: center;
+  flex-direction: column;
+}
+
+.col-one-fourth {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: calc(100% / 4);
+}

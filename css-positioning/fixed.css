@@ -4,7 +4,9 @@ html {
 
 .page-title {
   font-size: 3rem;
+  width: 100%;
   text-align: center;
 
   /* your code here */
+  position: fixed;
 }

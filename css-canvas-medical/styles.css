@@ -1,58 +1,116 @@
 /* div {
   border: 1px solid black;
 } */
-
-.row {
+div.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   width: 100%;
 }
 
-.col-half {
+body {
+  font-family: 'Tiempos Headline', sans-serif;
+}
+
+div.col-full,
+div.row {
+  width: 100%;
+}
+
+div.col-half {
   width: 50%;
 }
 
-.navbar {
+div.navbar {
   display: flex;
   width: 100%;
   border-bottom: 1px solid rgba(202, 202, 202, 0.5);
+  margin-bottom: 100px;
 }
 
-.logo-blue-button {
+img.logo-blue-button {
   width: 100%;
   padding: 10%;
 
   /* height: 50%; */
 }
 
-.logo-blue {
+div.logo-blue {
   display: flex;
   align-items: center;
-  margin: 0 0 0 5%;
+  margin: 0 0 0 7%;
 }
 
-.nav-items {
+div.nav-items {
   display: flex;
   align-items: center;
-  margin: 0 5% 0 0;
+  margin: 0 7% 0 0;
   justify-content: space-between;
+  font-family: 'Avenir', sans-serif;
 }
 
-nav-form {
-  margin: 0;
-  border: 0;
+a {
+  color: rgba(128, 128, 128, 0.5);
+  text-decoration: none;
+  border: none;
 }
 
 .nav-items > a {
   width: auto;
   padding: 2%;
   font-size: 25px;
-  color: rgba(128, 128, 128, 0.5);
-  border: none;
-  text-decoration: none;
   margin: 3% 0;
 }
 
-a.contact-us {
+a.blue-button {
   background-color: rgba(41, 68, 100, 255);
   color: white;
   border-radius: 0.2em;
+  font-family: 'Avenir', sans-serif;
+}
+
+div.about {
+  margin: 0% 7%;
+  display: flex;
+  background: url('images/hero.jpg') no-repeat;
+  background-size: cover;
+  color: white;
+  position: relative;
+}
+
+.about > * {
+  margin: 3% 0% 5% 7%;
+  z-index: 0;
+}
+
+p.about-heading {
+  font-size: 60px;
+  margin-bottom: 0;
+}
+
+p.about-content {
+  font-size: 24px;
+  line-height: 40px;
+  margin-bottom: 80px;
+  font-family: 'Avenir', sans-serif;
+}
+
+div.overlay {
+  background: linear-gradient(rgba(128, 128, 128, 0.3), rgba(128, 128, 128, 0.3));
+  position: absolute;
+  margin: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+div.canvas-main {
+  padding-right: 45.8%;
+  margin-bottom: 8%;
+}
+
+a.get-started {
+  font-size: 30px;
+  padding: 3% 9%;
 }

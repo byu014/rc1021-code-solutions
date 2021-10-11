@@ -1,0 +1,245 @@
+/* div {
+  border: 1px solid black;
+} */
+
+.avenir {
+  font-family: 'Avenir', sans-serif;
+}
+
+.tiempos-headline {
+  font-family: 'Tiempos Headline', sans-serif;
+}
+
+div.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* body {
+  font-family: 'Tiempos Headline', sans-serif;
+} */
+
+div.col-full,
+div.row {
+  width: 100%;
+}
+
+div.col-half {
+  width: 50%;
+}
+
+div.navbar {
+  display: flex;
+  width: 100%;
+  border-bottom: 1px solid rgba(202, 202, 202, 0.5);
+  margin-bottom: 100px;
+}
+
+img.logo-blue-button {
+  width: 100%;
+  padding: 10%;
+
+  /* height: 50%; */
+}
+
+div.logo-blue {
+  display: flex;
+  align-items: center;
+  margin: 0 0 0 7%;
+}
+
+div.nav-items {
+  display: flex;
+  align-items: center;
+  margin: 0 7% 0 0;
+  justify-content: space-between;
+
+  /* font-family: 'Avenir', sans-serif; */
+}
+
+a {
+  text-decoration: none;
+  border: none;
+}
+
+.nav-items > a {
+  color: rgba(128, 128, 128, 0.7);
+  width: auto;
+  padding: 2%;
+  font-size: 25px;
+  margin: 3% 0;
+}
+
+a.blue-button {
+  background-color: rgba(41, 68, 100, 255);
+  color: white;
+  border-radius: 0.2em;
+}
+
+div.about {
+  margin: 0% 7%;
+  display: flex;
+  background: url('images/hero.jpg') no-repeat;
+  background-size: cover;
+  color: white;
+  position: relative;
+}
+
+.about > * {
+  margin: 3% 0% 5% 7%;
+  z-index: 0;
+}
+
+p.about-heading {
+  font-size: 60px;
+  margin-bottom: 0;
+}
+
+p.about-content {
+  font-size: 24px;
+  line-height: 40px;
+  margin-bottom: 80px;
+}
+
+div.overlay {
+  background: rgba(128, 128, 128, 0.6);
+  position: absolute;
+  margin: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+div.canvas-main {
+  padding-right: 45.8%;
+  margin-bottom: 8%;
+}
+
+a.get-started {
+  font-size: 30px;
+  padding: 3% 9%;
+}
+
+div.preference {
+  margin: 0 7%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+div.pref-row {
+  background-color: rgba(211, 211, 211, 0.4);
+  margin-top: 4%;
+}
+
+p.pref-head {
+  color: rgb(100, 100, 100);
+  font-size: 45px;
+  margin-top: 10%;
+}
+
+p.pref-body {
+  padding: 0 27%;
+  font-size: 25px;
+  margin-top: 0;
+  color: rgb(128, 128, 128);
+
+  /* font-weight: 600; */
+}
+
+div.loc-row {
+  color: rgb(128, 128, 128);
+  font-size: 30px;
+  background: rgba(211, 211, 211, 0.4);
+  border-bottom: 1px solid rgba(202, 202, 202, 0.5);
+}
+
+div.locations {
+  display: flex;
+  margin: 3% 7% 0 7%;
+  margin-bottom: 8%;
+}
+
+div.locations-center {
+  display: flex;
+  flex-direction: column;
+  padding: 0% 7%;
+}
+
+div.ready {
+  display: flex;
+  margin: 3% 7% 0 7%;
+}
+
+p.ready-head {
+  color: rgb(100, 100, 100);
+  font-size: 45px;
+  margin-top: 5%;
+}
+
+p.ready-body {
+  color: rgb(128, 128, 128);
+  font-size: 25px;
+  margin-bottom: 10%;
+}
+
+div.get-started-flex {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+div.bottom-nav-row {
+  background-color: rgb(100, 100, 100);
+}
+
+div.bottom-nav {
+  display: flex;
+  margin: 10% 7% 10% 7%;
+}
+
+img.logo-white {
+  width: 30%;
+}
+
+p.address {
+  margin-top: 10%;
+  color: white;
+  font-size: 25px;
+  line-height: 35px;
+}
+
+div.bottom-nav-items {
+  display: flex;
+}
+
+.bottom-nav-flex > * {
+  color: white;
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+p.bottom-nav-head {
+  font-size: 30px;
+  margin-top: 0;
+}
+
+.bottom-nav-flex {
+  display: flex;
+  flex-direction: column;
+}
+
+div.footer {
+  margin: 5% 7% 7% 7%;
+}
+
+div.footer-links > a {
+  color: rgb(128, 128, 128);
+  font-size: 30px;
+  margin-right: 5%;
+  font-weight: 600;
+}

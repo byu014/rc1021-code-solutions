@@ -10,6 +10,7 @@
     "standard"
   ],
   "rules": {
+    "prefer-const": "off",
     "no-var": "off",
     "semi": [
       "error",

@@ -1,0 +1,53 @@
+div {
+  border: 1px solid black;
+}
+
+.tiempos-headline {
+  font-family: 'Tiempos Headline', sans-serif;
+}
+
+.avenir {
+  font-family: 'Avenir', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: grey;
+  text-align: center;
+  font-size: 25px;
+  padding: 2%;
+  border-radius: 0.2em;
+}
+
+a.blue-button {
+  background: rgba(20, 68, 100, 1);
+  color: white;
+}
+
+a.current {
+  color: rgba(20, 68, 100, 1);
+}
+
+div.container {
+  width: 100%;
+}
+
+div.row {
+  display: flex;
+  align-items: center;
+  padding: 2% 5%;
+}
+
+div.col-half {
+  width: 50%;
+}
+
+div.blue-logo {
+  display: flex;
+}
+
+div.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

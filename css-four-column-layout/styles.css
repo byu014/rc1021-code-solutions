@@ -1,0 +1,45 @@
+body {
+  font-family: sans-serif;
+}
+
+.container {
+  padding: 0 8%;
+}
+
+.col-full {
+  width: 100%;
+}
+
+.col-one-fourth {
+  width: calc(100% / 4);
+}
+
+.row {
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+}
+
+.body {
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 2%;
+}
+
+.img {
+  width: 100%;
+}
+
+.icon {
+  width: 25%;
+}

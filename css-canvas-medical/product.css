@@ -1,6 +1,6 @@
-div {
+/* div {
   border: 1px solid black;
-}
+} */
 
 .tiempos-headline {
   font-family: 'Tiempos Headline', sans-serif;
@@ -38,6 +38,10 @@ div.row {
   padding: 2% 5%;
 }
 
+div.col-full {
+  width: 100%;
+}
+
 div.col-half {
   width: 50%;
 }
@@ -50,4 +54,39 @@ div.nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+div.header {
+  background: url('images/product/product-header.jpg');
+  background-size: cover;
+  padding-right: 45%;
+  padding-bottom: 15%;
+  padding-top: 15%;
+  padding-left: 5%;
+  color: white;
+  position: relative;
+}
+
+p.header-heading {
+  font-size: 55px;
+}
+
+p.header-body {
+  font-size: 25px;
+}
+
+p.header-body,
+p.header-heading {
+  position: relative;
+  z-index: 1;
+}
+
+div.overlay {
+  background: rgba(128, 128, 128, 0.3);
+  position: absolute;
+  margin: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }

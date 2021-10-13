@@ -51,7 +51,10 @@ function categorizeAcidity(pH) {
   if (pH > 7 && pH <= 14) {
     return 'base';
   }
-  return 'neutral';
+  if (pH === 7) {
+    return 'neutral';
+  }
+  return 'invalid pH level';
 }
 
 function introduceWarnerBro(name) {

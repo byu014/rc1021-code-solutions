@@ -19,6 +19,10 @@ a {
   border-radius: 0.2em;
 }
 
+div.navbar {
+  border-bottom: 2px solid rgba(211, 211, 211, 0.5);
+}
+
 a.blue-button {
   background: rgba(20, 68, 100, 1);
   color: white;
@@ -36,6 +40,7 @@ div.row {
   display: flex;
   align-items: center;
   padding: 2% 5%;
+  margin-bottom: 10%;
 }
 
 div.col-full {

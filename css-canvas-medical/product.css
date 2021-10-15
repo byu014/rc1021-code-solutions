@@ -1,0 +1,98 @@
+/* div {
+  border: 1px solid black;
+} */
+
+.tiempos-headline {
+  font-family: 'Tiempos Headline', sans-serif;
+}
+
+.avenir {
+  font-family: 'Avenir', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: grey;
+  text-align: center;
+  font-size: 25px;
+  padding: 2%;
+  border-radius: 0.2em;
+}
+
+div.navbar {
+  border-bottom: 2px solid rgba(211, 211, 211, 0.5);
+  display: flex;
+  align-items: center;
+  padding: 2% 5%;
+  margin-bottom: 10%;
+}
+
+a.blue-button {
+  background: rgba(20, 68, 100, 1);
+  color: white;
+}
+
+a.current {
+  color: rgba(20, 68, 100, 1);
+}
+
+div.container {
+  width: 100%;
+}
+
+div.row {
+  width: 100%;
+}
+
+div.col-full {
+  width: 100%;
+}
+
+div.col-half {
+  width: 50%;
+}
+
+div.blue-logo {
+  display: flex;
+}
+
+div.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+div.header {
+  background: url('images/product/product-header.jpg');
+  background-size: cover;
+  padding-right: 45%;
+  padding-bottom: 15%;
+  padding-top: 15%;
+  padding-left: 5%;
+  color: white;
+  position: relative;
+}
+
+p.header-heading {
+  font-size: 55px;
+}
+
+p.header-body {
+  font-size: 25px;
+}
+
+p.header-body,
+p.header-heading {
+  position: relative;
+  z-index: 1;
+}
+
+div.overlay {
+  background: rgba(128, 128, 128, 0.3);
+  position: absolute;
+  margin: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}

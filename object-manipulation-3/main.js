@@ -10,7 +10,7 @@ function draw(player, deck, cardsPerHand, maxPerson) {
     delete deck[card];
     cardsPerHand--;
   }
-  let currentHand = player.hand[0].value + player.hand[1].value;
+  let currentHand = player.hand.reduce((acc, card) => acc + card.value, 0);
   if (currentHand > maxPerson.value) {
     maxPerson.name = player.name;
     maxPerson.value = currentHand;

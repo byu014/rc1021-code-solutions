@@ -65,6 +65,6 @@ let players = [
   }
 ];
 
-let cardsPerHand = 5;
+let cardsPerHand = 2;
 
 play(players, cardsPerHand);

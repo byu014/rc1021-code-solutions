@@ -7,6 +7,10 @@ img {
   padding: 2% 5%;
 }
 
+p {
+  margin: 2% 0;
+}
+
 .tiempos-headline {
   font-family: 'Tiempos Headline', sans-serif;
 }
@@ -106,6 +110,8 @@ a {
 
 .product {
   display: flex;
+  background-color: rgba(211, 211, 211, 0.1);
+  margin-top: 10%;
 }
 
 .product-info {
@@ -114,10 +120,21 @@ a {
   justify-content: center;
   color: grey;
   font-size: 25px;
+}
+
+.col-half:nth-of-type(2n) > .product-info {
   padding-left: 20%;
 }
 
-.product-headline {
+.col-half:nth-of-type(2n + 1) > .product-info {
+  padding-right: 20%;
+}
+
+.row:nth-last-of-type(4) .product {
+  border-bottom: 2px solid rgba(128, 128, 128, 0.1);
+}
+
+.headline {
   font-size: 50px;
   color: dimgray;
 }
@@ -133,4 +150,68 @@ a {
 
 .product-learn {
   color: rgba(20, 68, 100, 1);
+}
+
+.ready {
+  display: flex;
+}
+
+.ready-schedule {
+  display: flex;
+  flex-direction: column;
+  color: grey;
+  font-size: 25px;
+}
+
+.get-started {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  width: 100%;
+  height: 100%;
+}
+
+.get-started-button {
+  padding: 2% 5%;
+  font-size: 30px;
+}
+
+.address > img {
+  margin-bottom: 5%;
+}
+
+div.bottom-grey {
+  display: flex;
+  background-color: rgb(100, 100, 100);
+  padding-top: 10%;
+  padding-bottom: 10%;
+  color: white;
+  font-size: 25px;
+}
+
+.bottom-nav {
+  display: flex;
+  font-size: 35px;
+}
+
+.bottom-nav-items {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20%;
+}
+
+.bottom-nav-items > * {
+  margin: 5%;
+  color: white;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+}
+
+.footer-links a {
+  color: rgb(100, 100, 100);
+  margin: 2% 5% 2% 0;
+  font-weight: 600;
 }

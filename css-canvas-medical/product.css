@@ -1,6 +1,15 @@
-/* div {
+/* div,
+img {
   border: 1px solid black;
 } */
+
+.row > div {
+  padding: 2% 5%;
+}
+
+p {
+  margin: 2% 0;
+}
 
 .tiempos-headline {
   font-family: 'Tiempos Headline', sans-serif;
@@ -12,57 +21,59 @@
 
 a {
   text-decoration: none;
-  color: grey;
-  text-align: center;
   font-size: 25px;
-  padding: 2%;
   border-radius: 0.2em;
 }
 
-div.navbar {
+.nav-item {
+  padding: 2%;
+  color: grey;
+  text-align: center;
+}
+
+.navbar {
   border-bottom: 2px solid rgba(211, 211, 211, 0.5);
   display: flex;
   align-items: center;
-  padding: 2% 5%;
   margin-bottom: 10%;
 }
 
-a.blue-button {
+.blue-button {
   background: rgba(20, 68, 100, 1);
   color: white;
 }
 
-a.current {
+.current {
   color: rgba(20, 68, 100, 1);
 }
 
-div.container {
+.container {
   width: 100%;
 }
 
-div.row {
+.row {
   width: 100%;
 }
 
-div.col-full {
+.col-full {
   width: 100%;
 }
 
-div.col-half {
+.col-half {
   width: 50%;
 }
 
-div.blue-logo {
+.blue-logo {
   display: flex;
 }
 
-div.nav {
+.nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-div.header {
+.header {
   background: url('images/product/product-header.jpg');
   background-size: cover;
   padding-right: 45%;
@@ -73,21 +84,21 @@ div.header {
   position: relative;
 }
 
-p.header-heading {
+.header-heading {
   font-size: 55px;
 }
 
-p.header-body {
+.header-body {
   font-size: 25px;
 }
 
-p.header-body,
-p.header-heading {
+.header-body,
+.header-heading {
   position: relative;
   z-index: 1;
 }
 
-div.overlay {
+.overlay {
   background: rgba(128, 128, 128, 0.3);
   position: absolute;
   margin: 0;
@@ -95,4 +106,112 @@ div.overlay {
   bottom: 0;
   left: 0;
   right: 0;
+}
+
+.product {
+  display: flex;
+  background-color: rgba(211, 211, 211, 0.1);
+  margin-top: 10%;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: grey;
+  font-size: 25px;
+}
+
+.col-half:nth-of-type(2n) > .product-info {
+  padding-left: 20%;
+}
+
+.col-half:nth-of-type(2n + 1) > .product-info {
+  padding-right: 20%;
+}
+
+.row:nth-last-of-type(4) .product {
+  border-bottom: 2px solid rgba(128, 128, 128, 0.1);
+}
+
+.headline {
+  font-size: 50px;
+  color: dimgray;
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+}
+
+.product-image > img {
+  width: 100%;
+}
+
+.product-learn {
+  color: rgba(20, 68, 100, 1);
+}
+
+.ready {
+  display: flex;
+}
+
+.ready-schedule {
+  display: flex;
+  flex-direction: column;
+  color: grey;
+  font-size: 25px;
+}
+
+.get-started {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  width: 100%;
+  height: 100%;
+}
+
+.get-started-button {
+  padding: 2% 5%;
+  font-size: 30px;
+}
+
+.address > img {
+  margin-bottom: 5%;
+}
+
+div.bottom-grey {
+  display: flex;
+  background-color: rgb(100, 100, 100);
+  padding-top: 10%;
+  padding-bottom: 10%;
+  color: white;
+  font-size: 25px;
+}
+
+.bottom-nav {
+  display: flex;
+  font-size: 35px;
+}
+
+.bottom-nav-items {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20%;
+}
+
+.bottom-nav-items > * {
+  margin: 5%;
+  color: white;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+}
+
+.footer-links a {
+  color: rgb(100, 100, 100);
+  margin: 2% 5% 2% 0;
+  font-weight: 600;
 }

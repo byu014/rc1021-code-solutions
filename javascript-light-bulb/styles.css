@@ -1,0 +1,25 @@
+.container {
+  width: 100%;
+  height: 100vh;
+}
+
+.row {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.col-full {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.switch {
+  background-color: yellow;
+  width: 20em;
+  height: 20em;
+  border-radius: 10em;
+  box-shadow: 0 15px 0 15px rgba(255, 255, 0, 0.5);
+}

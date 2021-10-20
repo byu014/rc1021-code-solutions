@@ -2,9 +2,9 @@ const $form = document.forms[0];
 $form.addEventListener('submit', function (event) {
   event.preventDefault();
   const messageData = {};
-  for (let i = 0; i < $form.elements.length - 1; i++) {
-    messageData[$form.elements[i].name] = $form.elements[i].value;
-  }
+  messageData[$form.elements.name.name] = $form.elements.name.value;
+  messageData[$form.elements.email.name] = $form.elements.email.value;
+  messageData[$form.elements.message.name] = $form.elements.message.value;
   console.log('messageData:', messageData);
   event.target.reset();
 });

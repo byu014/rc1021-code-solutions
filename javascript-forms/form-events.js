@@ -12,9 +12,9 @@ function handleInput(event) {
   console.log('event.target.name and value:', event.target.name + ':' + event.target.value);
 }
 
-const $userName = document.forms[0].name;
-const $userEmail = document.forms[0].email;
-const $userMessage = document.forms[0].message;
+const $userName = document.querySelector('#user-name');
+const $userEmail = document.querySelector('#user-email');
+const $userMessage = document.querySelector('#user-message');
 
 $userName.addEventListener('focus', handleFocus);
 $userName.addEventListener('blur', handleBlur);

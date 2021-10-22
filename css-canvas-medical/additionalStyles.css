@@ -93,11 +93,13 @@ a {
 }
 
 .header-heading {
-  font-size: 55px;
+  font-size: 60px;
 }
 
 .header-body {
-  font-size: 25px;
+  font-size: 26px;
+  line-height: 35px;
+  margin-top: 5%;
 }
 
 .header-body,
@@ -107,7 +109,7 @@ a {
 }
 
 .overlay {
-  background: rgba(128, 128, 128, 0.3);
+  background: rgba(100, 100, 100, 0.3);
   position: absolute;
   margin: 0;
   top: 0;

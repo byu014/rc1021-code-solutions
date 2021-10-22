@@ -44,7 +44,7 @@ a {
 }
 
 .current {
-  color: rgba(20, 68, 100, 1);
+  color: rgba(20, 120, 150, 1);
 }
 
 .container {
@@ -74,8 +74,6 @@ a {
 }
 
 .header {
-  background: url('images/product/product-header.jpg');
-  background-size: cover;
   padding-right: 45%;
   padding-bottom: 15%;
   padding-top: 15%;
@@ -84,12 +82,24 @@ a {
   position: relative;
 }
 
+.product-header {
+  background: url('images/product/product-header.jpg');
+  background-size: cover;
+}
+
+.implementation-header {
+  background: url('images/implementation/implementation-header.jpg');
+  background-size: cover;
+}
+
 .header-heading {
-  font-size: 55px;
+  font-size: 60px;
 }
 
 .header-body {
-  font-size: 25px;
+  font-size: 26px;
+  line-height: 35px;
+  margin-top: 5%;
 }
 
 .header-body,
@@ -99,7 +109,7 @@ a {
 }
 
 .overlay {
-  background: rgba(128, 128, 128, 0.3);
+  background: rgba(100, 100, 100, 0.3);
   position: absolute;
   margin: 0;
   top: 0;
@@ -130,9 +140,9 @@ a {
   padding-right: 20%;
 }
 
-.row:nth-last-of-type(4) .product {
+/* .row:nth-last-of-type(4) .product {
   border-bottom: 2px solid rgba(128, 128, 128, 0.1);
-}
+} */
 
 .headline {
   font-size: 50px;
@@ -154,6 +164,7 @@ a {
 
 .ready {
   display: flex;
+  border-top: 2px solid rgba(128, 128, 128, 0.1);
 }
 
 .ready-schedule {
@@ -214,4 +225,40 @@ div.bottom-grey {
   color: rgb(100, 100, 100);
   margin: 2% 5% 2% 0;
   font-weight: 600;
+}
+
+.roi {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: rgb(100, 100, 100);
+  margin-bottom: 10%;
+}
+
+.roi-headline {
+  display: flex;
+  justify-content: center;
+  font-size: 55px;
+}
+
+.roi-list {
+  font-size: 30px;
+  margin-left: 20%;
+  margin-right: 25%;
+}
+
+span {
+  font-size: 55px;
+}
+
+.roi-list > p {
+  font-weight: normal;
+  font-size: 25px;
+  font-family: 'avenir', sans-serif;
+  line-height: 40px;
+}
+
+p.roi-list-title {
+  font-size: 35px;
+  margin-top: 10%;
 }

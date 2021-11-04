@@ -1,0 +1,44 @@
+.container {
+  max-width: 100rem;
+  margin: 0 auto;
+}
+
+.row {
+  width: 100%;
+}
+
+.col-full {
+  width: 100%;
+}
+
+.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chevron {
+  font-size: 3rem;
+}
+
+.fa-circle {
+  letter-spacing: 0.5rem;
+}
+
+.circles {
+  display: flex;
+  justify-content: center;
+}
+
+.img {
+  margin: 0 10rem;
+}
+
+img {
+  object-fit: contain;
+  width: 20rem;
+}
+
+i:hover {
+  cursor: pointer;
+}

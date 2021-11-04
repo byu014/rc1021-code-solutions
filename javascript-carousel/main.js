@@ -1,9 +1,10 @@
-function prevI() {
+// callback functions depending on the image selection method
+function leftI() {
   i += imgNames.length;
   return (i - 1) % imgNames.length;
 }
 
-function nextI() {
+function rightI() {
   i += imgNames.length;
   return (i + 1) % imgNames.length;
 }
@@ -16,14 +17,16 @@ function selectedIndex() {
   }
 }
 
+// callback for setInterval
 function intervalCB() {
-  changeImage(nextI);
+  changeImage(rightI);
 }
 
-function changeImage(cb) {
+// function used to change current image, pass in respective callback to get index of next image
+function changeImage(nextICB) {
   $circlesI[i].classList.remove('fas');
   $circlesI[i].classList.add('far');
-  i = cb();
+  i = nextICB();
   $circlesI[i].classList.remove('far');
   $circlesI[i].classList.add('fas');
   $img.src = `images/${imgNames[i]}`;
@@ -39,14 +42,16 @@ let i = 0;
 let imgNames = ['001.png', '004.png', '007.png', '025.png', '039.png'];
 let carouselIntervalId = setInterval(intervalCB, 2000);
 
+// listens for clicks on left and right arrows
 $carousel.addEventListener('click', function (event) {
   if (event.target.matches('.fa-chevron-left')) {
-    changeImage(prevI);
+    changeImage(leftI);
   } else if (event.target.matches('.fa-chevron-right')) {
-    changeImage(nextI);
+    changeImage(rightI);
   }
 });
 
+// lsitens for clicks on circles
 $circles.addEventListener('click', function (event) {
   if (event.target.matches('.fa-circle')) {
     changeImage(selectedIndex);

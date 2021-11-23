@@ -1,0 +1,401 @@
+    1  cd repos/code-journal/
+    2  code .
+    3  git config --global user.name "Bailey Yu"
+    4  git config --global user.email "bailey.yu@yahoo.com"
+    5  git config --global --list
+    6  git config --global core.editor vim
+    7  git config --global --list
+    8  ls
+    9  cd repos
+   10  ls
+   11  git clone git@github.com:byu014/driving-game.git
+   12  ls
+   13  cd driving-game/
+   14  npm ci
+   15  git checkout -b issue-1-user-can-see-their-car
+   16  code .
+   17  sudo apt-get install wget
+   18  code .
+   19  cd repos
+   20  ls
+   21  cd rc1021-code-solutions/
+   22  code .
+   23  git checkout -b http-messages
+   24  http https://example.com
+   25  https://learning-fuze.github.io/example/
+   26  http https://learning-fuze.github.io/example/
+   27  http https://example.com --verbose
+   28  code .
+   29  http --body GET https://jsonplaceholder.typicode.com/users > users.json
+   30  cat users.json
+   31  http --body GET https://example.com > index.html
+   32  cat index.html
+   33  ls
+   34  rm index.html users.json
+   35  ls
+   36  cd http-messages/
+   37  http --body GET https://example.com > index.html
+   38  http --body GET https://jsonplaceholder.typicode.com/users > users.json
+   39  ls
+   40  pwd
+   41  git status
+   42  cd ..
+   43  git add http-messages/
+   44  git commit -m "finished http-messages"
+   45  git push origin http-messages 
+   46  vscode://file/c/Users/baile/repos/
+   47  vscode://file//c/Users/baile/repos/
+   48  vscode://file/c:/Users/baile/repos/
+   49  code .
+   50  git switch master
+   51  git pull
+   52  git checkout -b javascript-ajax
+   53  git status
+   54  git add javascript-ajax/
+   55  git commit -m "finished javascript-ajax"
+   56  git status
+   57  git add javascript-ajax/
+   58  git commit -m "finished javascript-ajax"
+   59  git push origin javascript-ajax 
+   60  git switch master
+   61  git pull
+   62  cd
+   63  ls
+   64  cd repos
+   65  ls
+   66  cd driving-game/
+   67  code .
+   68  git stash
+   69  git status
+   70  git checkout -b issue-11-user-can-change-cars
+   71  git status
+   72  git add images/
+   73  git commit -m "added 2 new car models"
+   74  git push origin issue-11-user-can-change-cars 
+   75  git add -A
+   76  git commit -m "create object that contains all car options"
+   77  git push origin issue-11-user-can-change-cars 
+   78  ls
+   79  cd ..
+   80  ls
+   81  cd driving-game/
+   82  git add -A
+   83  git commit -m "create HTML for buttons to represent each car"
+   84  git push origin  issue-11-user-can-change-cars 
+   85  git stash
+   86  git status
+   87  git add images
+   88  git status
+   89  git commit -m "added images"
+   90  git status
+   91  git stash
+   92  git add -A
+   93  git commit -m "add event listener to listen for clicks on button containing div to switch cars based on button clicked"
+   94  git push origin issue-11-user-can-change-cars 
+   95  cd ..
+   96  ls
+   97  mkdir api-test
+   98  cd api-test/
+   99  code .
+  100  http https://api.genshin.dev/
+  101  http https://api.genshin.dev/ --verbose
+  102  http https://avatars.dicebear.com/api/male/john.svg?background=%230000ff
+  103  http https://goweather.herokuapp.com/weather/Curitiba
+  104  http https://genshin-app-api.herokuapp.com/api/enemydrops/info/Heavy%20Horn
+  105  cd ..
+  106  git clone git@github.com:byu014/ajax-project.git
+  107  cd ajax-project/
+  108  code .
+  109  npm ci
+  110  git checkout -b issue-1-user-view-characters
+  111  npm ci
+  112  git add -A
+  113  git status
+  114  git commit -m "add background image and apply dark filter to it"
+  115  git push origin issue-1-user-view-characters 
+  116  git add -A
+  117  git commit -m "add header with app name on left, nav items on right"
+  118  git add index.html 
+  119  git commit -m "create div with data-view="characters-view"
+  120  git commit -m "create div with data-view="characters-view""
+  121  git push origin issue-1-user-view-characters 
+  122  git add -A
+  123  git commit -m "create heading that represents the current view"
+  124  git push origin issue-1-user-view-characters 
+  125  git add -A
+  126  git commit -m "create template icon to match reference/using JS listen for 'DOMContentLoaded' to populate view with character icons using info from API"
+  127  git push origin issue-1-user-view-characters 
+  128  git add css/
+  129  git commit -m "removed a css property that was causing black container to have an unintended border"
+  130  git push origin issue-1-user-view-characters 
+  131  git switch master
+  132  git pull
+  133  git checkout -b issue-2-user-view-selected-character
+  134  git add index.html 
+  135  git commit -m "create new view data-view="character"
+  136  git commit -m "create new view data-view="character""
+  137  git push origin issue-2-user-view-selected-character 
+  138  git add -A
+  139  git commit -m "allow heading to dynamically change to selected character's name and put its respsective element symbol next to it"
+  140  git push origin  issue-2-user-view-selected-character 
+  141  git add -A
+  142  git commit -m "create character portrait icon and add stars underneath it representing character's rarity"
+  143  git add -A
+  144  git commit -m "create white div and add character description"
+  145  git push origin  issue-2-user-view-selected-character 
+  146  git add -A
+  147  git commit -m "add character weapon type and element"
+  148  git push origin  issue-2-user-view-selected-character 
+  149  git add -A
+  150  git commit -m "add skills"
+  151  git push origin issue-2-user-view-selected-character 
+  152  git add -A
+  153  git commit -m "changed dom creation to allow ease of cleanup when switching off character view"
+  154  git push origin issue-2-user-view-selected-character 
+  155  git switch master
+  156  git pull
+  157  git checkout -b issue-3-user-view-all-enemies
+  158  git add -A
+  159  git commit -m "create view with data-view='enemies'"
+  160  git push origin  issue-3-user-view-all-enemies 
+  161  git add -A
+  162  git commit -m "dynamically assigns icon or portrait depending on if portrait property exists for enemy portrait"
+  163  git add -A
+  164  git commit -m "populate view with enemies loaded from api"
+  165  git add -A
+  166  git commit -m "populate view with enemies loaded from api"
+  167  git push origin issue-3-user-view-all-enemies 
+  168  git add -A
+  169  git commit -m "bug fixes and margin styling between columns"
+  170  git push origin  issue-3-user-view-all-enemies 
+  171  git add -A
+  172  git commit -m "reduced amount of inline styling to minimum while retaining previous functionalities"
+  173  git push origin issue-3-user-view-all-enemies 
+  174  git add -A
+  175  git commit -m "fixed typos preventing class removal/addition inspawn locations"
+  176  git push origin issue-3-user-view-all-enemies 
+  177  git switch master
+  178  git pull
+  179  git checkout -b issue-5-user-view-all-weapons
+  180  git add -A
+  181  git commit -m "create a new view data-view="weapons""
+  182  git push origin issue-5-user-view-all-weapons 
+  183  git add -A
+  184  git commit -m "populate view with icons of weapons pulled from API, change weapon background color based on rarity"
+  185  git push origin issue-5-user-view-all-weapons 
+  186  git switch master
+  187  git pull
+  188  git checkout -b issue-6-user-view-weapon
+  189  git add -A
+  190  git commit -m "add weapon portrait and rarity star rating.add white container with description"
+  191  git add -A
+  192  git commit -m "add weapon type and source information"
+  193  git push origin issue-6-user-view-weapon 
+  194  git add -A
+  195  git commit -m "add ascension materials"
+  196  git push origin issue-6-user-view-weapon 
+  197  git switch master
+  198  git pull
+  199  git checkout -b issue-7-user-view-homepage
+  200  git add -A
+  201  git commit -m "nav dark all view but home"
+  202  git push origin issue-7-user-view-homepage 
+  203  git add -A
+  204  git commit -m "finished homepage"
+  205  git push origin issue-7-user-view-homepage 
+  206  git add -A
+  207  git commit -m "clicks on explore take user to characters page"
+  208  git push origin issue-7-user-view-homepage 
+  209  git add -A
+  210  git commit -m "changed site icon"
+  211  git push origin issue-7-user-view-homepage 
+  212  git status
+  213  git switch master
+  214  git pull
+  215  git add -A
+  216  git commit -m "minor styling changes"
+  217  git push
+  218  git switch issue-7-user-view-homepage 
+  219  git stash list
+  220  git stash --list
+  221  git stash 
+  222  git switch issue-7-user-view-homepage 
+  223  git switch issue-6-user-view-weapon 
+  224  git switch master
+  225  git stash
+  226  git add -A
+  227  git commit -m "fixed bug that prevented using nav items when on homepage"
+  228  git push
+  229  git add -A
+  230  git commit -m "fixed styling issue icon text was touching borders"
+  231  git push
+  232  git add -A
+  233  git commit -m "added hover styling to clickable elements"
+  234  git commit --amend
+  235  git push
+  236  git add -A
+  237  git commit -m "changed scrollbar styling"
+  238  git push
+  239  git add -A
+  240  git commit -m "reduced font size slightly"
+  241  git push
+  242  git add -A
+  243  git commit -m "lessened border radius on skill divs"
+  244  git push
+  245  git add -A 
+  246  git commit -m "updated image pathing code"
+  247  git push
+  248  git add -A
+  249  git commit -m "removed ../ from all image pathings"
+  250  git push
+  251  git add -A
+  252  git commit -m "minor css adjustments"
+  253  git push
+  254  git stash
+  255  git stash clear
+  256  git stash list
+  257  git add -A
+  258  git commit -m "fixed minor padding issue"
+  259  git push
+  260  git add -A
+  261  git commit -m "changed rarity stars colors"
+  262  git push
+  263  git add -A 
+  264  git commit -m "added feature to click on skill gifs to bring up a modal that displays gif at max size"
+  265  git push
+  266  git add -A
+  267  git commit -m "fixed home screen bug that cause it to overlap with nav during zooms"
+  268  git push
+  269  git add -A
+  270  git commit -m "added padding to bottom of homa"
+  271  git push
+  272  git checkout -b homepage-height-test
+  273  git add -A
+  274  git commit -m "increased homepadding"
+  275  git push origin homepage-height-test 
+  276  git add -A
+  277  git commit -m "removed active class from character anchor"
+  278  git push origin homepage-height-test 
+  279  git add -A
+  280  git commit -m "fixed bug prevent explore button from being pressed"
+  281  git push origin  homepage-height-test 
+  282  git add -A
+  283  git commit -m "changed initial zoom to 0"
+  284  git push origin homepage-height-test 
+  285  git stash
+  286  git switch master
+  287  git pull
+  288  git stash list
+  289  git stash clear
+  290  git add -A
+  291  git commit -m "page now scrolls to top whenever switching views"
+  292  git push
+  293  git add -A
+  294  git commit -m "updated 4 star weapon sources to differentiate between wishes and other sources"
+  295  git push
+  296  cd repos
+  297  cd ajax-project/
+  298  git checkout -b user-interfaces
+  299  code .
+  300  git add -A
+  301  git commit -m "added loading icon to content that are loading"
+  302  git push origin user-interfaces 
+  303  GIT add -A
+  304  git add -A
+  305  git commit -m "responsive UI"
+  306  git push origin user-interfaces 
+  307  cd ..
+  308  ls
+  309  cd prep-91621-code-solutions/
+  310  ls
+  311  cd ..
+  312  cd rc1021-code-solutions/
+  313  ls
+  314  git checkout -b es6-const-let
+  315  code .
+  316  git add es6-const-let/
+  317  git commit -m "finished es6-const-let"
+  318  git push origin es6-const-let 
+  319  git switch master
+  320  git checkout -b es6-template-literals
+  321  git add -A
+  322  git commit -m "finished es6-template-literals"
+  323  git push origin es6-template-literals 
+  324  git switch master
+  325  git pull
+  326  cat /home/dev/.ssh/
+  327  ls /home/dev/.ssh
+  328  vi /home/dev/.ssh/known_hosts
+  329  vim /home/dev/.ssh/known_hosts
+  330  nano /home/dev/.ssh/known_hosts
+  331  ssh-keygen -R 192.30.255.112
+  332  git pull
+  333  ssh-keygen -R 192.30.255.113
+  334  git pull
+  335  git checkout -b es6-destructuring
+  336  git add -A
+  337  git commit -m "finished es6-destructuring"
+  338  git push origin es6-destructuring 
+  339  git switch master; git pull
+  340  git add -A
+  341  git checkout -b es6-arrow-functions
+  342  git commit -m "finished es6-arrow-functions"
+  343  git add -A
+  344  git commit -m "finished es6-arrow-functions"
+  345  git push origin es6-arrow-functions 
+  346  git switch master
+  347  git pull
+  348  git checkout -b command-line-basics
+  349  man man
+  350  man cat
+  351  cat laziness.text impatience.text hubris.txt > three-virtues.txt
+  352  ls
+  353  rm three-virtues.txt 
+  354  cd command-line-basics/
+  355  cat laziness.text impatience.text hubris.txt > three-virtues.txt
+  356  rm three-virtues.txt 
+  357  cat laziness.txt impatience.txt hubris.txt > three-virtues.txt
+  358  cat three-virtues.txt 
+  359  ls lfz-staff/
+  360  ls lfz-staff/ -a
+  361  man ls
+  362  ls lfz-staff/ -F
+  363  man ls
+  364  ls -aF lfz-staff/ > lfz-staff/contents.txt
+  365  cat -aF lfz-staff/ > lfz-staff/contents.txt
+  366  ls -aF lfz-staff/ > lfz-staff/contents.txt
+  367  cat lfz-staff/contents.txt
+  368  pwd > i-was-here.txt
+  369  cat i-was-here.txt 
+  370  echo 'Hello, World!
+  371  echo 'Hello, World!' > hello.txt
+  372  cat hello.txt
+  373  touch tag-youre-it.txt
+  374  touch boop.txt
+  375  rm boop.txt 
+  376  touch snoot/boop.txt
+  377  ls snoot/
+  378  mkdir parent
+  379  man mkdir
+  380  mkdir -p parent/child
+  381  mkdir -p parent/child/grandchild
+  382  ls parent/
+  383  ls parent/child/
+  384  touch parent/child/grandchild/.gitkeep
+  385  ls -a
+  386  ls -a parent/child/grandchild/.
+  387  ls
+  388  mv pokiemans pokemon
+  389  ls
+  390  cat lol.txt
+  391  rm lol.txt 
+  392  ls
+  393  rm -r kill-me/
+  394  ls
+  395  cp and-then.txt no-and-then.txt
+  396  ls
+  397  cat and-then.txt 
+  398  cat no-and-then.txt 
+  399  man history
+  400  history
+  401  history > command-history.txt

@@ -16,7 +16,11 @@ app.post('/api/grades', (req, res) => {
 });
 
 app.get('/api/grades', (req, res) => {
-  res.json(grades);
+  const gradesArr = [];
+  for (let grade in grades) {
+    gradesArr.push(grades[grade]);
+  }
+  res.json(gradesArr);
 });
 
 // eslint-disable-next-line no-console

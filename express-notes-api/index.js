@@ -31,7 +31,7 @@ app.get('/api/notes/:id', (req, res) => {
   if (notes[id]) {
     res.status(200).json(notes[id]);
   } else {
-    res.status(400).json({ error: `cannot find note with id ${id}` });
+    res.status(404).json({ error: `cannot find note with id ${id}` });
   }
 });
 

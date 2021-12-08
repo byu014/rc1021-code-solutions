@@ -53,5 +53,36 @@ app.post('/api/grades', (req, res) => {
     });
 });
 
+app.put('/api/grades/:gradeId', (req, res) => {
+  let { gradeId } = req.params;
+  let { score, name, course } = req.body;
+  if (!name || !score || !course) {
+    res.status(400).json({ error: 'The following parameters are required: score, name, course' });
+  }
+  score = Number(score);
+  if (score < 0 || score > 100 || !Number.isInteger(score)) {
+    res.status(400).json({ error: 'score must be a positive integer between 0 and 100' });
+  }
+  gradeId = Number(gradeId);
+  if (!Number.isInteger(gradeId) || gradeId < 0) {
+    res.status(400).json({ error: 'gradeId must be a positive integer greater than 0' });
+  }
+  const sql = `
+    update "grades"
+    set "score" = $1, "name" = $2, "course" = $3
+    where "gradeId" = $4
+    returning *;
+  `;
+  const queryParams = [score, name, course, gradeId];
+  db.query(sql, queryParams)
+    .then(result => {
+      res.status(200).json(result.rows[0]);
+    })
+    .catch(err => {
+      console.error(err);
+      res.status(400).json({ error: 'invalid gradeId' });
+    });
+});
+
 // eslint-disable-next-line no-console
 app.listen(3000, () => console.log('express server running on port 3000'));

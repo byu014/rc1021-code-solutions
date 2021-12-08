@@ -22,8 +22,8 @@ app.get('/api/grades', (req, res) => {
       const grades = result.rows;
       res.json(grades);
     })
-    .catch(err => {
-      console.error(err);
+    .catch(error => {
+      console.error(error);
       res.status(500).json({ error: 'An unexpected error occurred' });
     });
 });
@@ -45,10 +45,10 @@ app.post('/api/grades', (req, res) => {
   const queryParams = [name, course, score];
   db.query(sql, queryParams)
     .then(result => {
-      res.status(200).send(result.rows[0]);
+      res.status(201).send(result.rows[0]);
     })
-    .catch(err => {
-      console.error(err);
+    .catch(error => {
+      console.error(error);
       res.status(500).json({ error: 'An unexpected error occurred' });
     });
 });
@@ -76,11 +76,41 @@ app.put('/api/grades/:gradeId', (req, res) => {
   const queryParams = [score, name, course, gradeId];
   db.query(sql, queryParams)
     .then(result => {
-      res.status(200).json(result.rows[0]);
+      if (!result.rows.length) {
+        res.status(404).json({ error: 'grade does not exist' });
+      } else {
+        res.status(200).json(result.rows[0]);
+      }
     })
-    .catch(err => {
-      console.error(err);
-      res.status(400).json({ error: 'invalid gradeId' });
+    .catch(error => {
+      console.error(error);
+      res.status(500).json({ error: 'An unexpected error occurred' });
+    });
+});
+
+app.delete('/api/grades/:gradeId', (req, res) => {
+  let { gradeId } = req.params;
+  gradeId = Number(gradeId);
+  if (!Number.isInteger(gradeId) || gradeId < 0) {
+    res.status(400).json({ error: 'gradeId must be a positive integer greater than 0' });
+  }
+  const sql = `
+    delete from "grades"
+    where "gradeId" = $1
+    returning *;
+  `;
+  const queryParams = [gradeId];
+  db.query(sql, queryParams)
+    .then(result => {
+      if (!result.rows.length) {
+        res.status(404).json({ error: 'grade does not exist' });
+      } else {
+        res.status(204).send();
+      }
+    })
+    .catch(error => {
+      console.error(error);
+      res.status(500).json({ error: 'An unexpected error occurred' });
     });
 });
 

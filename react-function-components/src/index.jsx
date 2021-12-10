@@ -5,4 +5,4 @@ function CustomButton(props) {
   return <button>Click Me</button>;
 }
 
-ReactDOM.render(CustomButton(), document.querySelector('#root'));
+ReactDOM.render(<CustomButton/>, document.querySelector('#root'));

@@ -1,0 +1,34 @@
+body {
+  box-sizing: border-box;
+}
+
+.background {
+  display: flex;
+  align-items: center;
+  width: 6rem;
+  height: 3rem;
+  border-radius: 3rem;
+
+  /* box-shadow: inset 0 0 0 0  black; */
+  padding: 0.3rem;
+}
+
+.switch {
+  width: 3rem;
+  height: 3rem;
+  background-color: white;
+  border-radius: 1.5rem;
+  border: none;
+  box-shadow: -1px 3px 10px 1px rgba(65, 44, 44, 0.3);
+  margin: 0;
+}
+
+.off {
+  background-color: grey;
+  justify-content: start;
+}
+
+.on {
+  background-color: rgb(115, 230, 0);
+  justify-content: end;
+}

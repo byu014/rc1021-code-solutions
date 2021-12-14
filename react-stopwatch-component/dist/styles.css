@@ -1,0 +1,42 @@
+body {
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: sans-serif;
+}
+
+.stopwatch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stopwatch * {
+  margin: 0.5rem;
+}
+
+.timer {
+  border: 5px solid black;
+  border-radius: 100%;
+  width: 10rem;
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.time {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.play-button {
+  border: none;
+  background: none;
+  font: inherit;
+}
+
+.play-button:hover,
+.timer:hover {
+  cursor: pointer;
+  user-select: none;
+}

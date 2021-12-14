@@ -3,17 +3,17 @@ body {
 }
 
 .background {
+  transition: background-color 0.3s;
   display: flex;
   align-items: center;
   width: 6rem;
   height: 3rem;
   border-radius: 3rem;
-
-  /* box-shadow: inset 0 0 0 0  black; */
   padding: 0.3rem;
 }
 
 .switch {
+  transition: transform 0.3s;
   width: 3rem;
   height: 3rem;
   background-color: white;
@@ -25,10 +25,12 @@ body {
 
 .off {
   background-color: grey;
-  justify-content: start;
 }
 
 .on {
   background-color: rgb(115, 230, 0);
-  justify-content: end;
+}
+
+.on * {
+  transform: translateX(3rem);
 }

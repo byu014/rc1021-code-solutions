@@ -1,0 +1,53 @@
+
+body {
+  box-sizing: border-box;
+  height: 100vh;
+}
+
+ul {
+  list-style: none;
+}
+
+.topic {
+  position: relative;
+}
+
+.detail {
+  margin: 0;
+  border: 3px solid black;
+  border-top: none;
+  border-bottom: none;
+  height: 10rem;
+  transform: scale(1);
+  position: relative;
+}
+
+.topic-button {
+  border: 3px solid black;
+  background: lightgray;
+  font-size: 1.6rem;
+  width: 100%;
+  text-align: left;
+  padding: 0.5rem;
+}
+
+.accordion {
+  display: flex;
+}
+
+.accordion > * {
+  width: 30rem;
+}
+
+.topic:last-child .detail {
+  border-bottom: 3px solid black;
+}
+
+.inactive {
+  position: absolute;
+  transform: scaleY(0);
+}
+
+.topic-button:hover {
+  cursor: pointer;
+}

@@ -11,14 +11,37 @@ class ValidatedInput extends React.Component {
     this.setState({ [event.target.name]: event.target.value });
   }
 
-  render() {
+  validation() {
     const { password } = this.state;
-    let errorMsg = '';
     if (!password.length) {
-      errorMsg = 'A password is required.';
-    } else if (password.length < 8) {
-      errorMsg = 'Your password is too short.';
+      return 'A password is required.';
     }
+    if (password.length < 8) {
+      return 'Your password is too short.';
+    }
+
+    let hasDigit = false;
+    let hasCapital = false;
+    let hasSpecial = false;
+    for (let char of password) {
+      if (typeof Number.parseInt(char) === 'number') {
+        hasDigit = true;
+      }
+      if (char.charCodeAt(0) >= 65 && char.charCodeAt(0) <= 90) {
+        hasCapital = true;
+      }
+      if (this.props.specialChars.has(char)) {
+        hasSpecial = true;
+      }
+    }
+    if (!(hasDigit && hasCapital && hasSpecial)) {
+      return 'Your password needs to have a digit, a capital letter, and a special letter ( !, @, #, $, %, ^, &, *, (, or ) )';
+    }
+    return '';
+  }
+
+  render() {
+    const errorMsg = this.validation();
     return (
       <div className="container">
         <form action="">

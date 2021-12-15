@@ -6,7 +6,7 @@ class AppDrawer extends React.Component {
     this.state = { isModal: false };
     this.handleClick = this.handleClick.bind(this);
     this.title = this.props.title;
-    this.itemsList = this.props.itemsList.map(item => <li key={item}><a>{item}</a></li>);// don't have a proper key for this example
+    this.itemsList = [];
   }
 
   handleClick(event) {
@@ -21,6 +21,7 @@ class AppDrawer extends React.Component {
   render() {
     const { isModal } = this.state;
     const { itemsList, title } = this;
+    this.itemsList = this.props.itemsList.map(item => <li key={item.id}><a>{item.name}</a></li>);
     return (
       <div onClick={this.handleClick} className="container">
         <div className={`modal ${isModal ? '' : 'hidden'}`}></div>

@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 1.6rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.flex {
+  display: flex;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.column {
+  flex-direction: column;
+}
+
+img {
+  user-select: none;
+  width: 20rem;
+  padding: 0 10rem;
+}
+
+.progress-circle {
+  padding: 0.5rem;
+}

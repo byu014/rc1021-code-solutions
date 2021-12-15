@@ -10,10 +10,10 @@ class Accordion extends React.Component {
 
   handleClick(event) {
     if (event.target.matches('.topic-button')) {
-      if (this.state.current === event.target.id) {
+      if (this.state.current === event.target.topicId) {
         this.setState({ current: null });
       } else {
-        this.setState({ current: event.target.id });
+        this.setState({ current: event.target.topicId });
       }
     }
   }
@@ -22,7 +22,7 @@ class Accordion extends React.Component {
     this.topics = this.props.topics.map(topic => {
       return (
         <li className='topic' key={topic.id}>
-          <button id={topic.id} className='topic-button'>{topic.name}</button>
+          <button topicId={topic.id} className='topic-button'>{topic.name}</button>
           <p className={`detail ${Number.parseInt(this.state.current) === topic.id ? '' : 'inactive'}`}>{topic.detail}</p>
         </li>
       );

@@ -74,6 +74,7 @@ export default class App extends React.Component {
           })
           .then(response => response.json())
           .then(todo => { this.setState({ todos: todos }); });
+        break;
       }
     }
   }

@@ -1,0 +1,56 @@
+* User can sign up
+
+The App component checks if the current hash route is 'sign-up' from this.state.route.
+If it is, it renders the Auth component to the page. From AppContext context,
+user, route, handleSignIn are destructured out. If user is already signed in, it'll reroute
+them to ''. If not, the welcome message will be dependent on whether
+route is currently on sign-in or sign-up. The AuthForm rendered by Auth component
+is passed down handleSignIn and route. when user fills out auth form and submits,
+the form's handleSubmit method will dynamically adjust it's post endpoint to `/api/auth/${action}`
+based on the value of this.props.action. The client makes a post request to '/api/auth/sign-up' with the
+current state stringified.
+
+Server destructures username and password from req's body and checks to ensure that
+both username and password are provided in the body. When the check passes, the
+password is hashed with argon2. If successful, an sql query is made that inserts into the user table
+a new user with username and password. A JSON of the user's userID, username, and
+createdAt is sent back as a response to the client.
+
+When client recieves response from server, if client's current route is 'sign-up',
+it'll reroute user to 'sign-in' page.
+
+* User can sign in
+
+The App component checks if the current hash route is 'sign-in' from this.state.route.
+If it is, it renders the Auth component to the page. From AppContext context,
+user, route, handleSignIn are destructured out. If user is already signed in, it'll
+reroute them to ''. If not, the welcome message will be dependent on whether
+route is currently on sign-in or sign-up. The AuthForm rendered by Auth component
+is passed down handleSignIn and route. when user fills out auth form and submits,
+the form's handleSubmit method will dynamically adjust it's post endpoint to `/api/auth/${action}`
+based on the value of this.props.action. The client makes a post request to '/api/auth/sign-in' with the
+current state stringified.
+
+Server destructures username and password from req's body and checks to ensure that
+both username and password are provided in the body. When the check passes, an sql query
+is made that retrieves the corresponding username. If matching user exists,
+username and hashedPassword is destructured from user. The hashedPassword and password
+is passed into argon2's verify method to check if the passwords match. If it matches,
+a JSON containg a JWT and user payload is created and sent back to the user to use for authorization,
+or else a clientError is thrown.
+
+When client recieves response from server, if result contains a user and token property,
+this.props.onSignIn passed from Auth component is called. The JWT is stored in localStorage
+and App's user property in state is set to the current user from null.
+
+* User can stay signed in (even if they refresh the page).
+
+If current route isn't '' and user is signed in, the app will reroute to ''.
+If route is '', Home component will be rendered. Home component checks to ensure if
+user is signed in. If not, user will be rerouted to 'sign-in' route. Otherwise,
+user will be shown Rick Roll gif.
+
+* User can sign out
+
+If user clicks sign out in the Nav component, handleSignOut will be called, which was passed
+from AppContext. handleSignOut will remove the JWT from localStorage and reset user state to null.
